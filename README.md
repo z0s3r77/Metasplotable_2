@@ -138,7 +138,7 @@ A continuación pondremos la IP de la maquina a atacar, en este caso será la 19
 
 Al instante se inciará el ataque DDoS:
 
-        ![imagen](https://user-images.githubusercontent.com/80277545/146827705-d3f29f69-e187-49bb-b7ad-99b459d4e98d.png)
+![imagen](https://user-images.githubusercontent.com/80277545/146827705-d3f29f69-e187-49bb-b7ad-99b459d4e98d.png)
 
 
 Cuando se esté realizando el ataque, al recargar la pagina en el navegador, no nos resolverá la petición y se quedará cargando. Esto significará que el servidor está siendo atacado y no puede responder las solicitudes. 
