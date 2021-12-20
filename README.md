@@ -21,6 +21,7 @@ Una vez instalado tendremos que añadirle otra tarjeta de red, esto lo haremos y
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146818821-d302eb96-32f3-4bef-bd4b-d3835508bbb4.png)
 
+           En caso de no tener el "Adaptador sólo-anfritión", podemos añadirlo desde "archivo" > "Administrador de red anfritión" > Crear
 
 La ventaja de hacerlo con este metodo es que no tenemos que "instalar" desde cero Kali Linux. Una vez finalizado, al iniciar el sistema directamente nos pedirá un usuario y una contraseña.
 
@@ -28,4 +29,23 @@ La ventaja de hacerlo con este metodo es que no tenemos que "instalar" desde cer
         contraseña : kali
 
 ##### Preparando Metasploitable2
+
+Ahora descargaremos 
+
+
+Crearemos una nueva maquina virtual con las siguientes caracteristicas:
+
+![imagen](https://user-images.githubusercontent.com/80277545/146820065-5e61817b-266c-44bc-ac2e-54463689d62b.png)
+
+Daremos en "Next" y dejaremos la memoria ram asignada en "1024".
+
+Posteriormente crearemos un "Disco duro virtual" :
+
+![imagen](https://user-images.githubusercontent.com/80277545/146820292-ee85fe7f-1d16-438a-b7fe-257227093c3a.png)
+
+De tipo "VDI" y "Reservado dinámicamente" de "10GB".
+
+
+
+
 
