@@ -1,6 +1,5 @@
 # Metasploiable2
-# Preparación del entorno
-## Preparar Kali Linux y Metasploitable2
+## Preparación Kali Linux y Metasploitable2
 ##### Preparando Kali Linux
 
 El virtualizador que usaremos es VirtualBox. Lo primero que haremos será irnos a la página de Kali Linux y descargar el archivo OVA:
