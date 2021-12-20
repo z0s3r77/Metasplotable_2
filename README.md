@@ -1,4 +1,4 @@
-# Metasploiable2
+# Metasploitable 2
 ## Preparación Kali Linux y Metasploitable2
 ##### Preparando Kali Linux
 
