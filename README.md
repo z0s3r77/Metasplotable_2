@@ -30,10 +30,18 @@ La ventaja de hacerlo con este metodo es que no tenemos que "instalar" desde cer
 
 ##### Preparando Metasploitable2
 
-Ahora descargaremos 
+Ahora descargaremos Metasploitable2 desde el siguiente enlace, para esto tendremos que rellenar este formulario (pueden ser datos falsos) y descargar el archivo comprimido: 
+
+https://information.rapid7.com/download-metasploitable-2017.html
+
+![imagen](https://user-images.githubusercontent.com/80277545/146821125-89d27534-9f43-406a-8b3a-314ef2dc1369.png)
+
+Una vez descargado y descomprimido nos quedarán los siguientes archivos: 
+
+![imagen](https://user-images.githubusercontent.com/80277545/146821415-49dc4747-6175-4f95-94b8-71931b535dda.png)
 
 
-Crearemos una nueva maquina virtual con las siguientes caracteristicas:
+Ahora crearemos una nueva maquina virtual con las siguientes caracteristicas:
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146820065-5e61817b-266c-44bc-ac2e-54463689d62b.png)
 
@@ -45,7 +53,45 @@ Posteriormente crearemos un "Disco duro virtual" :
 
 De tipo "VDI" y "Reservado dinámicamente" de "10GB".
 
+Una vez creada, nos vamos a "Configuración", "Almacenamiento" y eliminaremos "Metasploitable 2.vdi":
 
+![imagen](https://user-images.githubusercontent.com/80277545/146822046-6d53e649-0459-4f13-8050-5ac2e6a94bbe.png)
+
+Ahora añadiremos el nuevo disco que está dentro de los archivos que descargamos de Metasploitable2:
+
+![imagen](https://user-images.githubusercontent.com/80277545/146822386-a1066bf4-722c-4c69-bc52-99acf64e9629.png)
+
+A esta maquina también le cambiaremos el adaptador red "NAT" a "Adaptador sólo-anfritión":
+
+![imagen](https://user-images.githubusercontent.com/80277545/146823149-188a2bb7-94d2-4540-987f-c3e012b0bd9c.png)
+
+
+Ahora iniciamos la maquina y nos tendría que salir la siguiente interfaz: 
+
+![imagen](https://user-images.githubusercontent.com/80277545/146822770-0af677c1-8d1f-4c32-bf87-cebd1f3caf5b.png)
+
+El usuario y contraseña es: 
+
+                Usuario : msfadmin
+                Contraseña : msfadmin
+
+Una vez dentro ejectuaremos "ifconfig" para saber la IP del eth1:
+
+![imagen](https://user-images.githubusercontent.com/80277545/146823247-d17b9f87-11bf-4d0e-858f-0ba882793b00.png)
+
+
+## Comprobando conectividad
+
+Una vez estamos dentro de las dos maquinas, desde la de Kali vamos a realizar un ping para comprobar que tiene conectividad. En mi caso, la IP de Metasploitable2 es la 192.168.56.105:
+
+           ping 192.168.56.105
+
+![imagen](https://user-images.githubusercontent.com/80277545/146823628-db34255d-90fd-4beb-a9b3-e0b035b85b73.png)
+
+Si resuelve igual que en la imagen anterior, significa que todo está instalado correctamente. 
+
+
+           
 
 
 
