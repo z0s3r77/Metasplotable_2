@@ -21,7 +21,10 @@ Una vez instalado tendremos que añadirle otra tarjeta de red, esto lo haremos y
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146818821-d302eb96-32f3-4bef-bd4b-d3835508bbb4.png)
 
-           En caso de no tener el "Adaptador sólo-anfritión", podemos añadirlo desde "archivo" > "Administrador de red anfritión" > Crear
+        En caso de no tener el "Adaptador sólo-anfritión", podemos añadirlo desde "archivo" > "Administrador de red anfritión" > Crear
+        
+        ![imagen](https://user-images.githubusercontent.com/80277545/146823922-7d4c0b59-c2fa-495a-b5b4-ab6d452c7bec.png)
+
 
 La ventaja de hacerlo con este metodo es que no tenemos que "instalar" desde cero Kali Linux. Una vez finalizado, al iniciar el sistema directamente nos pedirá un usuario y una contraseña.
 
