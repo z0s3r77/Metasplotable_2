@@ -8,23 +8,24 @@ https://kali.download/virtual-images/kali-2021.4/kali-linux-2021.4-virtualbox-am
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146815893-0627a255-e3ed-46dd-94da-05bb3cbbc0b9.png)
 
-Una vez descargado, debemos descromprimirlo y obtener el archivo .OVA:
+Una vez descargado, debemos descomprimirlo y obtener el archivo .OVA:
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146817611-3e4ed7ef-879d-4d8a-90b9-f7094e341e17.png)
 
-Ahora abrimos VirtualBox y importamos el archivo .OVA:
+Ahora abrimos VirtualBox e importamos el archivo .OVA:
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146817830-dc69f517-8c4a-42bb-a169-c9d594e9fcab.png)
 
-Una vez instalado tendremos que añadirle otra tarjeta de red, esto lo haremos yendo a la configuración de la maquina > Red > Adaptador2. Lo habilitaremos y añadiremos el "Adaptador sólo-anfritión": 
+Una vez instalado tendremos que añadirle otra tarjeta de red, esto lo haremos yendo a la configuración de la máquina > Red > Adaptador2. Lo habilitaremos y añadiremos el "Adaptador sólo-anfritión": 
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146818821-d302eb96-32f3-4bef-bd4b-d3835508bbb4.png)
 
 ( En caso de no tener el "Adaptador sólo-anfritión", podemos añadirlo desde "archivo" > "Administrador de red anfritión" > Crear ) 
+
 ![imagen](https://user-images.githubusercontent.com/80277545/146823922-7d4c0b59-c2fa-495a-b5b4-ab6d452c7bec.png)
 
 
-La ventaja de hacerlo con este metodo es que no tenemos que "instalar" desde cero Kali Linux. Una vez finalizado, al iniciar el sistema directamente nos pedirá un usuario y una contraseña.
+La ventaja de hacerlo con este método es que no tenemos que "instalar" desde cero Kali Linux. Una vez finalizado, al iniciar el sistema directamente nos pedirá un usuario y una contraseña.
 
         usuario : kali
         contraseña : kali
@@ -42,11 +43,11 @@ Una vez descargado y descomprimido nos quedarán los siguientes archivos:
 ![imagen](https://user-images.githubusercontent.com/80277545/146821415-49dc4747-6175-4f95-94b8-71931b535dda.png)
 
 
-Ahora crearemos una nueva maquina virtual con las siguientes caracteristicas:
+Ahora crearemos una nueva máquina virtual con las siguientes características:
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146820065-5e61817b-266c-44bc-ac2e-54463689d62b.png)
 
-Daremos en "Next" y dejaremos la memoria ram asignada en "1024".
+Daremos en "Next" y dejaremos la memoria RAM asignada en "1024".
 
 Posteriormente crearemos un "Disco duro virtual" :
 
@@ -62,12 +63,12 @@ Ahora añadiremos el nuevo disco que está dentro de los archivos que descargamo
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146822386-a1066bf4-722c-4c69-bc52-99acf64e9629.png)
 
-A esta maquina también le cambiaremos el adaptador red "NAT" a "Adaptador sólo-anfritión":
+A esta máquina también le cambiaremos el adaptador red "NAT" a "Adaptador sólo-anfritión":
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146823149-188a2bb7-94d2-4540-987f-c3e012b0bd9c.png)
 
 
-Ahora iniciamos la maquina y nos tendría que salir la siguiente interfaz: 
+Ahora iniciamos la máquina y nos tendría que salir la siguiente interfaz: 
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146822770-0af677c1-8d1f-4c32-bf87-cebd1f3caf5b.png)
 
@@ -83,7 +84,7 @@ Una vez dentro ejectuaremos "ifconfig" para saber la IP del eth1:
 
 ## Comprobando conectividad
 
-Una vez estamos dentro de las dos maquinas, desde la de Kali vamos a realizar un ping para comprobar que tiene conectividad. En mi caso, la IP de Metasploitable2 es la 192.168.56.105:
+Una vez estamos dentro de las dos máquinas, desde la de Kali vamos a realizar un ping para comprobar que tiene conectividad. En mi caso, la IP de Metasploitable2 es la 192.168.56.105:
 
            ping 192.168.56.105
 
@@ -91,15 +92,15 @@ Una vez estamos dentro de las dos maquinas, desde la de Kali vamos a realizar un
 
 Si resuelve igual que en la imagen anterior, significa que todo está instalado correctamente. 
 
-Podemos ingresar a la pagina del servidor si desde nuestro Kali Linux introducimos la IP del mismo:
+Podemos ingresar a la página del servidor si desde nuestro Kali Linux introducimos la IP del mismo:
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146824329-c54b8f79-1911-4c92-9383-7ea58c62a5ee.png)
 
 # PRACTICA: Realizando un ataque DDoS 
 
-( El fin de esta practica es educativo )
+( El fin de esta práctica es educativo )
 
-Desde nuestro Kali, vamos a usar un exploit de Metasploit (recordemos que Metasploit simplemente es como una libreria de exploits, una libreria de herramientas). 
+Desde nuestro Kali, vamos a usar un exploit de Metasploit (recordemos que Metasploit simplemente es como una librería de exploits, una librería de herramientas). 
 
 Abriremos una terminal y ejecutaremos:
 
@@ -113,7 +114,7 @@ Iniciaremos Metasploit en modo superusuario:
 ![imagen](https://user-images.githubusercontent.com/80277545/146827302-48d76b0a-6696-4606-b135-684022cd46e2.png)
 
 
-Una vez dentro de Metasploit buscaremos la herramienta/exploit synflood , esto lo haremos con el parametro "search"
+Una vez dentro de Metasploit buscaremos la herramienta/exploit synflood , esto lo haremos con el parámetro "search"
 
         search dos synflood
         
@@ -140,9 +141,12 @@ Al instante se inciará el ataque DDoS:
 ![imagen](https://user-images.githubusercontent.com/80277545/146829014-d9ccfcff-4ecb-4bde-bb84-2cfe65ba03c8.png)
 
 
-Cuando se esté realizando el ataque, al recargar la pagina en el navegador, no nos resolverá la petición y se quedará cargando. Esto significará que el servidor está siendo atacado y no puede responder a todas las solicitudes. 
+Cuando se esté realizando el ataque, al recargar la página en el navegador, no nos resolverá la petición y se quedará cargando. Esto significará que el servidor está siendo atacado y no puede responder a todas las solicitudes. 
 
 
+# Conclusión
+
+Con esto finalizamos la intalación y la practica de Metasploitable2 y Kali Linux, lo suyo sería, a partir de aquí, explorar que posibilidades tenemos para adentrarnos más en el mundo del pentesting. 
 
 
 
