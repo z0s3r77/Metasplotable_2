@@ -104,7 +104,8 @@ Podemos ingresar a la página del servidor si desde nuestro Kali Linux introduci
 
 ![imagen](https://user-images.githubusercontent.com/80277545/146824329-c54b8f79-1911-4c92-9383-7ea58c62a5ee.png)
 
-# PRACTICA: Realizando un ataque DDoS 
+# PRACTICAS: 
+## Realizando un ataque DDoS 
 
 ( El fin de esta práctica es educativo )
 
@@ -151,6 +152,46 @@ Al instante se inciará el ataque DDoS:
 
 Cuando se esté realizando el ataque, al recargar la página en el navegador, no nos resolverá la petición y se quedará cargando. Esto significará que el servidor está siendo atacado y no puede responder a todas las solicitudes. 
 
+## Realizando inclusión por FTP
+
+A continuación, se mostrará como abrir una backdoor a travéz del puerto 21 del Server. 
+
+Lo primero que haremos es abrir de nuevo el cliente de Metasploit:
+
+          msfconsole
+
+![imagen](https://user-images.githubusercontent.com/80277545/147389766-52816995-29e9-4c44-9e38-03a9c66c83dc.png)
+
+Buscaremos la herramienta que nos permitirá ejecutar el backdoor:
+
+           search vsftp 
+           use 0 
+           
+![imagen](https://user-images.githubusercontent.com/80277545/147389792-096c37fe-b0e6-4c08-a4ce-21993f3dde75.png)
+
+Podemos escribir _info_ para ver todas las opciones del exploit:
+
+![imagen](https://user-images.githubusercontent.com/80277545/147389911-6a23f96a-eca6-4cbf-8f3f-db108e0e943f.png)
+
+A continuación, estableceremos la IP de Metasplotable2:
+![imagen](https://user-images.githubusercontent.com/80277545/147389941-d6aecc16-48d3-45df-afd9-3451c3e74ac7.png)
+![imagen](https://user-images.githubusercontent.com/80277545/147389960-85db6b2c-72ed-4434-9639-f454f0dd733c.png)
+
+Ahora, simplemente ejecutaremos:
+
+            RUN
+            
+![imagen](https://user-images.githubusercontent.com/80277545/147389974-b8ebcaa8-db39-4138-8f5f-50a937a74add.png)
+
+En caso de no salir al primer "RUN", tan solo hay que volverlo a ejecutar:
+
+![imagen](https://user-images.githubusercontent.com/80277545/147389986-cd5e4736-19f9-48ef-b542-913fba25fb33.png)
+
+Ahora, tendremos una shell a modo backdoor. Por ejemplo ejecutare un _whoami_ para saber el usuario y un _pwd_ para saber la ruta en la que estoy ubicado:
+
+![imagen](https://user-images.githubusercontent.com/80277545/147390019-e2931a76-fc81-4986-8009-90199c74236b.png)
+
+Y con esto, concluimos el backdoor y la intrusión. 
 
 # Conclusión
 
